@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import NewNote  from './components/NewNote';
+import NoteList from './components/NoteList';
+
+const style = {
+  'marginTop' : '0px',
+  'padding' : '20px',
+  'textAlign' : 'center',
+  'backgroundColor' : '#2e34a1',
+  'color' : '#fff'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 style={style}>NoteBook</h1>
+      <NewNote />
+      <NoteList />
     </div>
   );
 }
