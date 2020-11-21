@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Note from './Note';
-import EditComponent from './EditNote';
+import EditComponent from './EditComponent';
 
 class NoteList extends Component {
     render() {

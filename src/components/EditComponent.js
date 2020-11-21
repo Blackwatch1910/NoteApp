@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-class EditNote extends Component {
+
+class EditComponent extends Component {
     handleUpdate = (e) => {
         e.preventDefault();
         const newTitle = this.getTitle.value;
@@ -30,4 +31,4 @@ class EditNote extends Component {
         );
     }
 }
-export default connect()(EditNote);
+export default connect()(EditComponent);

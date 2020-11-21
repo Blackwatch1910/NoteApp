@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 class Note extends Component {
     render() {
         return (
@@ -6,10 +8,10 @@ class Note extends Component {
                 <h2 className="note_title">{this.props.note.title}</h2>
                 <p className="note_message">{this.props.note.message}</p>
                 <div className="control-buttons">
-                    <button className="edit" onClick={() => this.props.dispatch({type: 'EDIT_NOTE', id: this.props.note.id})}>
+                    <button className="btn btn-1" onClick={() => this.props.dispatch({type: 'EDIT_NOTE', id: this.props.note.id})}>
                         Edit
                     </button>
-                    <button className="delete" onClick={() => this.props.dispatch({ type: 'DELETE_NOTE', id: this.props.note.id })}>
+                    <button className="btn btn-1" onClick={() => this.props.dispatch({ type: 'DELETE_NOTE', id: this.props.note.id })}>
                         Delete
                     </button>
                 </div>
@@ -17,4 +19,5 @@ class Note extends Component {
         )
     }
 }
-export default Note;
+
+export default connect()(Note);
